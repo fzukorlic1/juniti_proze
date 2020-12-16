@@ -20,5 +20,6 @@ public class NegativeIonCollider : MonoBehaviour
     {
         Debug.Log("kliknut");
         Timer.reduceTime(5);
+        gameObject.SetActive(false);
     }
 }

@@ -99,7 +99,7 @@ public class GameData
     {
         string packId = "1";
         string packName = "Default pack";
-        LevelData[] levels = new LevelData[] { generateDummyLevel(), generateDummyLevel2() };
+        LevelData[] levels = new LevelData[] { generateLevel1(), generateLevel2() };
 
         PackData pack = new PackData(packId, packName, levels);
 
