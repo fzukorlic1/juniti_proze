@@ -25,7 +25,7 @@ public class GameData
 
         Directory.CreateDirectory(path + "/packs");
 
-        if (!File.Exists(path + "/packs.dat"))
+        //if (!File.Exists(path + "/packs.dat"))
         {
             Debug.Log("No packs found. Creating default pack...");
             try
