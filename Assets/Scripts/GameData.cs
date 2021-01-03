@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System;
 using System.Collections.Generic;
 
-[InitializeOnLoad]
+//[InitializeOnLoad]
 public class GameData
 {
     public static List<PackData> packs;

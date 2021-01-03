@@ -271,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &71378154
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1141,7 +1141,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1024
   m_RenderingLayerMask: 1
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
@@ -1427,7 +1427,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773453237}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -1469,7 +1469,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1024
   m_RenderingLayerMask: 1
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
@@ -2115,6 +2115,8 @@ MonoBehaviour:
   goToMainMenuButton: {fileID: 577963159}
   block: {fileID: 1245624039270827524, guid: 76c6e466ae387ee45b82b1349c1a66b1, type: 3}
   wallBlock: {fileID: 3397613336321278555, guid: e63c6bcfe4d34614f9f26d732a6c77c7,
+    type: 3}
+  wallBlockTorch: {fileID: 3397613336321278555, guid: cbb771448d068dd4ca9c2bd70033f830,
     type: 3}
   player: {fileID: 1730076550}
   blockPlace: {fileID: 7610486629917483128, guid: 1d49150acd6c10844aebc42086f685ef,

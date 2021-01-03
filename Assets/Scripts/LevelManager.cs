@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour
 
     public GameObject block;
     public GameObject wallBlock;
+    public GameObject wallBlockTorch;
     public GameObject player;
     public GameObject blockPlace;
     public GameObject floorTile;
@@ -169,6 +170,7 @@ public class LevelManager : MonoBehaviour
                     case '1':
                         playingGrid[i,j] = '1';
                         Instantiate(wallBlock, new Vector3(i * blockDim, wallBlock.transform.position.y, j * blockDim), new Quaternion(0, 0, 0, 0));
+                        Instantiate(wallBlockTorch, new Vector3(i * blockDim, wallBlock.transform.position.y + blockDim, j * blockDim), new Quaternion(0, 0, 0, 0));
                         break;
                     case 'P':
                         Instantiate(floorTile, new Vector3(i * blockDim, blockPlace.transform.position.y, j * blockDim), new Quaternion(0, 0, 0, 0));
