@@ -235,6 +235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2824761820061772978, guid: 5477b04b5a8ecab4f981589604108bfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2824761820061772982, guid: 5477b04b5a8ecab4f981589604108bfd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -314,6 +319,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Torch (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824761820061772978, guid: 5477b04b5a8ecab4f981589604108bfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2824761820061772982, guid: 5477b04b5a8ecab4f981589604108bfd,
         type: 3}
@@ -395,6 +405,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2824761820061772978, guid: 5477b04b5a8ecab4f981589604108bfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2824761820061772982, guid: 5477b04b5a8ecab4f981589604108bfd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -474,6 +489,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Torch
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824761820061772978, guid: 5477b04b5a8ecab4f981589604108bfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2824761820061772982, guid: 5477b04b5a8ecab4f981589604108bfd,
         type: 3}
