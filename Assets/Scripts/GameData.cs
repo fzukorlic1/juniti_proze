@@ -212,7 +212,7 @@ public class GameData
             {'0','0','0','0','0','1','1','1','1','1','0','0','0','0','0','0','0','0','0','0','0','0','0'},
         };
 
-        NegativeIonData[] negativeIons = new NegativeIonData[1] { new NegativeIonData(9, 22, 0.5f, 0.5f, (int)NegativeIonData.SideT.Down) };
+        NegativeIonData[] negativeIons = new NegativeIonData[1] { new NegativeIonData(10, 21, 0.2f, 0.5f, (int)NegativeIonData.SideT.Left) };
 
         return new LevelData(levelId, levelName, grid, negativeIons);
     }
