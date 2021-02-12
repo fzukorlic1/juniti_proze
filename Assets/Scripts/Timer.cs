@@ -21,8 +21,9 @@ public class Timer : MonoBehaviour
     {
         if (!isPaused)
         {
+            float numVal = Mathf.Abs(timeElapsed);
             timeElapsed += Time.deltaTime;
-            textGUI.text = ((int)timeElapsed / 60).ToString() + ":" + ((int)timeElapsed % 60).ToString();
+            textGUI.text = (timeElapsed > 0 ? "" : "-") + ((int)numVal / 60).ToString() + ":" + ((int)numVal % 60).ToString();
         }
     }
 

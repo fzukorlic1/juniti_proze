@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
     public Animator doorOpenAnimator;
+    public AudioSource doorSound;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class SceneChanger : MonoBehaviour
         if (doorOpenAnimator)
         {
             doorOpenAnimator.Play("DoorOpenAnimation");
+            doorSound.Play();
         }
         Invoke("EnterGame", 1);
     }

@@ -31,6 +31,10 @@ public class LevelManager : MonoBehaviour
     public GameObject floorTile;
     public GameObject negativeIon;
 
+    public AudioSource restartSound;
+    public AudioSource pushSound;
+    public static AudioSource pushSoundStatic;
+
     public Camera minimapCamera;
 
     static char[,] playingGrid;
@@ -48,6 +52,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pushSoundStatic = pushSound;
         PlayerMovement.disableMovement = false;
         goToMainMenuButton.GetComponent<Button>().onClick.AddListener(delegate {
             gameObject.GetComponent<SceneChanger>().MainMenuScene();
@@ -85,6 +90,10 @@ public class LevelManager : MonoBehaviour
         {
             if (Mathf.Abs(blockToMove.position.x - whereTo.x) < 0.1 && Mathf.Abs(blockToMove.position.z - whereTo.z) < 0.1)
             {
+                foreach(ParticleSystem child in blockToMove.GetComponentsInChildren(typeof(ParticleSystem)))
+                {
+                    child.Stop();
+                }
                 blockToMove.position = whereTo;
                 blockMoving = false;
                 if (winningMovePlayed)
@@ -103,6 +112,7 @@ public class LevelManager : MonoBehaviour
                         finishPackPanel.SetActive(true);
                     } else
                     {
+                        
                         Button button = nextLevelButton.GetComponent<Button>();
                         button.onClick.RemoveAllListeners();
                         button.onClick.AddListener(delegate {
@@ -115,10 +125,14 @@ public class LevelManager : MonoBehaviour
             } else
             {
                 blockToMove.position += positingOffset * Time.deltaTime;
+                foreach(ParticleSystem child in blockToMove.GetComponentsInChildren(typeof(ParticleSystem)))
+                {
+                    child.Play();
+                }
             }
         } else
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R) && !PlayerMovement.isMoving)
             {
                 restartLevel();
             }
@@ -248,6 +262,7 @@ public class LevelManager : MonoBehaviour
         blockMoving = false;
         winningMovePlayed = false;
         Timer.restart();
+        restartSound.Play();
     }
 
     public static bool checkMove(GameObject movingBlockCollider, string direction)
@@ -319,6 +334,9 @@ public class LevelManager : MonoBehaviour
                 break;
         }
 
+        if (!pushSoundStatic.isPlaying) {
+            pushSoundStatic.Play();
+        }
 
         for (int i=0;i<playingBlocks.Count;i++)
         {

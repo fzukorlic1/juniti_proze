@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
+    public AudioSource runSound;
 
     public float speed = 12f;
 
     public static bool disableMovement = false;
+    public static bool isMoving = false;
     // Update is called once per frame
     void Update()
     {
@@ -19,9 +21,15 @@ public class PlayerMovement : MonoBehaviour
 
         if(!disableMovement && (x != 0 || z != 0))
         {
+            if (!runSound.isPlaying) {
+                runSound.Play();
+            }
             controller.Move(move * speed * Time.deltaTime);
+            isMoving = true;
         }
-
+        else {
+            isMoving = false;
+        }
         
     }
 }

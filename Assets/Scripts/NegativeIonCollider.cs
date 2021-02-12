@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class NegativeIonCollider : MonoBehaviour
 {
+    public AudioSource ionSound;
+    public AudioClip ionClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,9 @@ public class NegativeIonCollider : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log("kliknut");
-        Timer.reduceTime(5);
+        Timer.reduceTime(120);
+        //ionSound.Play();
+        AudioSource.PlayClipAtPoint(ionClip, ionSound.transform.position);
         gameObject.SetActive(false);
     }
 }
