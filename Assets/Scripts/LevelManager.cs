@@ -334,9 +334,7 @@ public class LevelManager : MonoBehaviour
                 break;
         }
 
-        if (!pushSoundStatic.isPlaying) {
-            pushSoundStatic.Play();
-        }
+        pushSoundStatic.Play();
 
         for (int i=0;i<playingBlocks.Count;i++)
         {
