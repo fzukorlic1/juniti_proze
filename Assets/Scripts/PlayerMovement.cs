@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public AudioSource runSound;
 
-    public float speed = 12f;
+    public float speed = 8f;
 
     public static bool disableMovement = false;
     public static bool isMoving = false;
